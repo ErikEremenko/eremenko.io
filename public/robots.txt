@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eremenko.io/sitemap.xml

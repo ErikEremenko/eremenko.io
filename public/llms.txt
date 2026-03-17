@@ -1,0 +1,19 @@
+# Erik Eremenko — Software Developer
+
+> Personal website of Erik Eremenko, a Computer Science student at the Technical University of Munich (TUM) with a minor in Mathematics.
+
+## About
+
+Erik Eremenko is a software developer and CS student at TU Munich (6th semester). He builds prediction market platforms, high-performance C++ simulations, and full-stack web applications. He is co-founder of PolySimulator (Bavariance) and an early adopter of AI-assisted development workflows using GitHub Copilot Agent and MCP integrations.
+
+## Contact
+
+- Email: erik.eremenko@tum.de
+- GitHub: https://github.com/ErikEremenko
+- LinkedIn: https://www.linkedin.com/in/erik-eremenko-a225a625a/
+- Kaggle: https://www.kaggle.com/erikeremenko
+- Website: https://eremenko.io
+
+## Extended Information
+
+For detailed information about projects, experience, research, and skills, see: https://eremenko.io/llms-full.txt

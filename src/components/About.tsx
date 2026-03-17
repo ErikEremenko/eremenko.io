@@ -9,7 +9,7 @@ export default function About() {
             I&apos;m a Computer Science student at the{" "}
             <span className="text-foreground">Technical University of Munich</span>{" "}
             (minor in Mathematics), currently in my 6th semester. I&apos;m
-            passionate about building software that solves real problems — from
+            passionate about building software that solves real problems - from
             prediction market platforms to molecular dynamics simulators.
           </p>
           <p>
@@ -23,7 +23,7 @@ export default function About() {
               PolySimulator
             </a>
             , I developed a full-stack paper-trading platform that serves 1,880+
-            registered users. I enjoy working across the stack — from
+            registered users. I enjoy working across the stack - from
             low-level C++ simulations to cloud-native web applications.
           </p>
           <p>
@@ -46,7 +46,7 @@ export default function About() {
                 B.Sc. Computer Science, Minor in Mathematics
               </p>
               <p className="text-xs text-muted mt-1">
-                Oct 2023 — exp. Apr 2027
+                Oct 2023 - exp. Apr 2027
               </p>
             </div>
             <div className="border-l-2 border-card-border pl-4">
@@ -54,9 +54,9 @@ export default function About() {
                 Königin-Luise-Gymnasium Erfurt
               </p>
               <p className="text-sm text-muted">
-                Abitur — graduated with distinction (1.2/1.0, GPA equiv. 3.85/4.0)
+                Abitur - graduated with distinction (1.2/1.0, GPA equiv. 3.85/4.0)
               </p>
-              <p className="text-xs text-muted mt-1">2015 — 2023</p>
+              <p className="text-xs text-muted mt-1">2015 - 2023</p>
             </div>
           </div>
         </div>
