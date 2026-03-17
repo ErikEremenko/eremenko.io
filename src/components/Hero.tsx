@@ -62,7 +62,7 @@ export default function Hero() {
           <EmailIcon className="w-5 h-5" />
         </a>
         <a
-          href="/main-web.pdf"
+          href="/cv-erik-eremenko.pdf"
           download
           className="text-muted hover:text-foreground transition-colors"
           aria-label="Download CV"
