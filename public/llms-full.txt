@@ -21,8 +21,8 @@ At ING Deutschland he is a working student in AI Workplace Assistance, bringing 
 ### Moving production to London (October 2026)
 - Four days from decision to cutover. The website was in maintenance for 11 minutes 22 seconds; 7,590 user records and 7,867 login identities were copied with matching row counts and checksums, with reverse replication ready for a rollback.
 
-### Order-book capture (since July 2026)
-- PolySimulator records Polymarket's full order-book feed itself, on 8 recorder shards, into a datalake of about 20 TB.
+### Order-book recorder (since 31 July 2026)
+- 8 recorder processes keep about 1,900 WebSocket connections open to Polymarket's public market feed: about 6 billion order-book rows a day, around 2 TB of new data a week, continuous since 31 July 2026.
 
 ### Pull requests
 - 4,445 pull requests merged into PolySimulator's main repository between 17 November 2025 and 21 October 2026 (GitHub, fetched 22 October 2026). Since May 2026 AI agents have written nearly all of the code; most code changes get an AI review before merging, and production releases need one of the two founders.

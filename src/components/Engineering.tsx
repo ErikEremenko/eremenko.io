@@ -2,34 +2,41 @@ const columns = [
   {
     h: "Trading engine",
     p: [
-      "Market orders walk the live order book level by level and fill at the volume-weighted price. Each outcome's book is merged with its complement's, since a bid for No at 40¢ is an offer of Yes at 60¢.",
-      "Limit orders rest and fill partially as the book moves. Fees follow Polymarket's taker schedule for each market category.",
-      "It refuses to fill against a crossed or stale book. Every balance change is an atomic ledger entry, and a repeated order ID returns the original order instead of filling twice.",
+      "Market orders walk the live order book level by level and fill at the volume-weighted price. The engine is complement-aware like Polymarket's own: a bid for No at 40¢ is an offer of Yes at 60¢.",
+      "A book older than two seconds (750 ms for live sports) is fetched again before anything fills against it. Takers pay Polymarket's fee formula with per-category rates; makers pay nothing.",
+      "Limit orders rest and are matched every second, with partial fills. Every balance change is an atomic ledger entry, a repeated order ID returns the original order instead of filling twice, and resolved markets pay $1 or $0 a share.",
     ],
   },
   {
     h: "API and SDK",
     p: [
-      "REST and WebSocket, with API keys. A compatibility layer mirrors Polymarket's order format and WebSocket channels, so a bot written for Polymarket can point at PolySimulator instead. Orders never reach Polymarket.",
-      "The public Python SDK includes a drop-in replacement for Polymarket's own Python client.",
-      "A limits page in the docs says plainly what the simulator does not model, such as queue position and the market impact of your own orders.",
+      "REST and WebSocket, with routes and channels that follow Polymarket's, so a bot written for Polymarket can point at PolySimulator instead. Orders never reach Polymarket.",
+      "API keys are stored hashed and rate-limited per key, in published tiers from 2 to 100 requests a second. It handled 3.3 million API requests in the 24 hours to 22 October 2026.",
+      "The Python SDK on PyPI follows the interface of Polymarket's own Python client. A partner API lets other platforms run simulated accounts for their users.",
     ],
   },
   {
     h: "Order-book recorder",
     p: [
-      "Since 30 July 2026 we record Polymarket's full market feed ourselves: book snapshots, price changes, trades and tick-size changes for every active market, spread over 8 recorder processes.",
-      "Every frame is numbered, so a gap shows up instead of hiding. Hourly Parquet files go to Cloudflare R2 with manifests that record checksums and gaps, and a check compares the layers three times an hour.",
-      "The archive, about 20 TB and growing, feeds book replay, backtests and research.",
+      "8 recorder processes keep about 1,900 WebSocket connections open to Polymarket's public market feed and record every book snapshot, price change and trade, around the clock since 31 July 2026.",
+      "Every hour each process writes Parquet files to Cloudflare R2 and reads each upload back to check it. Every frame is numbered, so a gap shows up instead of hiding, and a check compares the recorded layers every 20 minutes.",
+      "That is about 6 billion order-book rows a day, around 2 TB of new data a week. An hourly job sorts it by market for replay and backtests.",
     ],
   },
+];
+
+const stats = [
+  { v: "409,000+", k: "simulated fills" },
+  { v: "3,800+", k: "traders with at least one fill" },
+  { v: "70,000+", k: "markets traded" },
+  { v: "~6 billion", k: "order-book rows written a day" },
 ];
 
 const more = [
   {
     when: "Backtests",
     h: "Replay without look-ahead",
-    p: "Backtests replay the recorded order books. Fills default to the latency we measured in production, and each fill carries a look-ahead flag that is computed from the data, not assumed.",
+    p: "Backtests replay the recorded order books. Each order can be delayed by a realistic latency (we suggest the 104 ms median we measured in production) and is priced against the book as it stood when it would have arrived. Each fill carries a look-ahead flag computed from the data.",
   },
   {
     when: "October 2026",
@@ -88,7 +95,7 @@ function DataFlow() {
       <path className="w" d="M390 259 H416" markerEnd="url(#fg)" />
       {box(420, 230, 160, "Hourly files", "Parquet, manifests")}
       <path className="w" d="M580 259 H606" markerEnd="url(#fg)" />
-      {box(610, 230, 170, "Datalake", "Cloudflare R2, ~20 TB")}
+      {box(610, 230, 170, "Datalake", "Cloudflare R2, ~2 TB/week")}
       <path className="w" d="M780 259 H806" markerEnd="url(#fg)" />
       {box(810, 230, 150, "Replay", "backtests, research")}
       <path className="w" d="M885 230 V149 H784" markerEnd="url(#fg)" />
@@ -160,7 +167,8 @@ export default function Engineering() {
               </li>
               <li>
                 <b>Recording</b>8 recorder processes write hourly Parquet files
-                with manifests to a datalake on Cloudflare R2, about 20 TB so far.
+                to a datalake on Cloudflare R2: about 6 billion order-book rows
+                a day, around 2 TB of new data a week.
               </li>
               <li>
                 <b>Replay</b>The archive feeds backtests and research through
@@ -169,6 +177,15 @@ export default function Engineering() {
             </ol>
           </div>
         </div>
+
+        <dl className="stats">
+          {stats.map((x) => (
+            <div key={x.k}>
+              <dt>{x.k}</dt>
+              <dd>{x.v}</dd>
+            </div>
+          ))}
+        </dl>
 
         <div className="cols3">
           {columns.map((c) => (
@@ -191,9 +208,10 @@ export default function Engineering() {
           ))}
         </ul>
         <p className="src">
-          Engine, API and recorder: PolySimulator&apos;s code and documentation,
-          October 2026. Account and move figures: production records, October
-          2026. Archive size: our storage, October 2026.
+          Engine, API and recorder: PolySimulator&apos;s code, October 2026.
+          Fills, traders and markets: production database, 22 October 2026.
+          Recorder volume: the recorders&apos; own logs, average of 15 to 21
+          October 2026. Move figures: production records, 21 October 2026.
         </p>
       </div>
     </section>

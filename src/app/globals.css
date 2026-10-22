@@ -428,6 +428,35 @@ a {
   border-radius: 12px;
   padding: 28px 28px 22px;
 }
+.seg {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 9px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  margin-bottom: 22px;
+}
+.seg button {
+  font-family: var(--head);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink-2);
+  background: transparent;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.seg button:hover {
+  color: var(--ink);
+}
+.seg button[aria-pressed="true"] {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: 0 0 0 1px var(--rule-strong);
+}
 .activity .head {
   display: flex;
   flex-wrap: wrap;
@@ -509,7 +538,6 @@ a {
 .data table {
   border-collapse: collapse;
   margin-top: 10px;
-  font-variant-numeric: tabular-nums;
 }
 .data th,
 .data td {
@@ -549,6 +577,32 @@ a {
   line-height: 1.6;
   color: var(--ink-2);
   margin: 0 0 12px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0 32px;
+  margin: 40px 0 0;
+}
+.stats div {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  border-left: 2px solid var(--accent);
+  padding-left: 14px;
+}
+.stats dd {
+  margin: 0;
+  font-family: var(--head);
+  font-weight: 800;
+  font-size: 30px;
+  letter-spacing: -0.02em;
+}
+.stats dt {
+  font-family: var(--head);
+  font-size: 14px;
+  color: var(--ink-2);
 }
 
 /* ---------------------------------------------------------------- work */
@@ -791,6 +845,13 @@ a {
   }
   .cols3 > div + div {
     margin-top: 28px;
+  }
+  .stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 20px;
+  }
+  .stats dd {
+    font-size: 24px;
   }
   .activity .heat-d {
     display: none;

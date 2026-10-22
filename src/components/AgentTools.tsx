@@ -1,31 +1,31 @@
 const tools = [
   {
     k: "Shared memory",
-    v: "One versioned memory store per project, synced between two machines. Facts can carry a command that re-checks them, the index stays within the agents' context limits, and nothing is deleted silently.",
-  },
-  {
-    k: "Context keeper",
-    v: "Writes a handoff file, warns a session as its context window fills up, and puts the essentials back after the context is compacted.",
+    v: "One memory store per project, kept in git and synced between two machines every 20 minutes. Its index is generated to stay within the agents' context limit, after an index that had grown too large was silently cut off.",
   },
   {
     k: "Assignment queue",
-    v: "One file per request with its status kept in place, so work survives restarts and handovers between sessions.",
+    v: "Every request becomes a file with its status kept in place. Built after requests were lost when a session's context was compacted.",
   },
   {
-    k: "Session hub",
-    v: "Fixed roles and addresses for every session, message receipts, and restarts that don't lose work.",
+    k: "Prior-work check",
+    v: "Before starting, a session checks whether the work already exists. Built after two sessions rebuilt the same thing on the same day.",
+  },
+  {
+    k: "Session registry",
+    v: "Stable names, roles and message receipts for every session, plus watchers that keep running when a session ends.",
   },
   {
     k: "Secret guard",
-    v: "Redacts credentials from command output, stops agents from reading key files, and sweeps the transcripts every night.",
+    v: "Rewrites commands so credentials are masked in their output, blocks reads of key files, and sweeps the transcripts every night.",
   },
   {
     k: "Review gate",
-    v: "Runs Codex reviews on pull requests one after another and records which commit each review checked.",
+    v: "Runs a Codex review on a pull request and posts it with the model, commit and transcript hash. It refuses to post without the reviewer's final message, after a full disk once made it report zero findings.",
   },
   {
-    k: "Mail log",
-    v: "Every email the agents send me is kept word for word, so a fact stated once can be found again.",
+    k: "Alerts and mail",
+    v: "Grafana alerts land in the assignment queue every five minutes, and every email the agents send me is logged word for word.",
   },
 ];
 
@@ -36,8 +36,8 @@ export default function AgentTools() {
       <p className="intro">
         Coding agents out of the box forget what they learned, get in each
         other&apos;s way and can see whatever is in their terminal. The tooling
-        around them is our own: about 70 scripts and some 10,800 lines in my
-        repositories, used every day.
+        around them is our own, about 70 scripts and 11,000 lines, and several
+        pieces exist because something went wrong.
       </p>
       <dl className="skills">
         {tools.map((t) => (
@@ -47,7 +47,7 @@ export default function AgentTools() {
           </div>
         ))}
       </dl>
-      <p className="src">Size: the agent tooling repository, counted on 21 October 2026.</p>
+      <p className="src">Size: the agent tooling repository, counted on 22 October 2026.</p>
     </div>
   );
 }
