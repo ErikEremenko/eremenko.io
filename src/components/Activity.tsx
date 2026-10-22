@@ -8,7 +8,6 @@ const MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "Ju
 const DAYS = ["Mon", "", "Wed", "", "Fri", "", ""];
 const n = (x: number) => x.toLocaleString("en-US");
 const sum = (a: readonly number[]) => a.reduce((s, x) => s + x, 0);
-const both = data.commits_me.map((x, i) => x + data.commits_co[i]);
 // Index of 1 March 2026 in the daily series.
 const MARCH = Math.round((Date.parse("2026-03-01") - Date.parse(data.start)) / 864e5);
 
@@ -25,20 +24,11 @@ const VIEWS = {
     )} of them before March`,
     src: COMMIT_SRC,
   },
-  both: {
-    tab: "Both founders",
-    counts: both,
-    unit: "commits",
-    label: `commits by the two founders: ${n(sum(data.commits_me))} under my name, ${n(
-      sum(data.commits_co),
-    )} under my co-founder's`,
-    src: COMMIT_SRC,
-  },
   prs: {
     tab: "Merged pull requests",
     counts: data.counts,
     unit: "merged",
-    label: `pull requests merged: ${n(data.erik)} from my account, ${n(data.cofounder)} from my co-founder's and ${data.other} from GitHub's Copilot agent`,
+    label: "pull requests merged into the main repository, nearly all of them opened by agents",
     src: "Source: GitHub, every pull request merged into PolySimulator's main repository, by the account that opened it and UTC merge date; fetched 22 October 2026.",
   },
 } as const;
