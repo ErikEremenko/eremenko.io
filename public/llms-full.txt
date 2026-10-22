@@ -1,25 +1,26 @@
 # Erik Eremenko — Software Developer (Full Profile)
 
-> Personal website of Erik Eremenko, a Computer Science student at the Technical University of Munich (TUM) with a minor in Mathematics.
+> Personal website of Erik Eremenko, who builds and runs software with AI coding agents. Information Systems student at the Technical University of Munich (TUM).
 
 ## About
 
-Erik Eremenko is a Computer Science student at the Technical University of Munich (minor in Mathematics), currently in his 6th semester. He is passionate about building software that solves real problems — from prediction market platforms to molecular dynamics simulators.
+Erik Eremenko builds software with AI coding agents and runs it in production.
 
-As co-founder of PolySimulator (https://polysimulator.com), he developed a full-stack paper-trading platform that serves 1,880+ registered users. He enjoys working across the stack — from low-level C++ simulations to cloud-native web applications.
+Since November 2025 he and his co-founder have built PolySimulator (https://polysimulator.com), a paper-trading simulator and trading API for Polymarket with 7,000+ registered accounts. Since May 2026 nearly all of its code has been written by AI agents that he orchestrates with Claude Code and Codex: sessions with fixed roles, a shared memory, AI review before merging, and production alerts routed back to the agents. How it works: https://bavariance.com/work
 
-He is an early adopter of AI-assisted development workflows, using GitHub Copilot Agent and MCP integrations extensively in his daily work.
+At ING Deutschland he is a working student in AI Workplace Assistance, bringing applied AI and automation to teams across the bank.
 
 ## Education
 
-- **Technical University of Munich** — B.Sc. Computer Science, Minor in Mathematics (Oct 2023 – exp. Apr 2027)
-- **Königin-Luise-Gymnasium Erfurt** — Abitur, graduated with distinction (1.2/1.0, GPA equiv. 3.85/4.0) (2015 – 2023)
+- **Technical University of Munich** — B.Sc. Information Systems (Wirtschaftsinformatik) (since Oct 2026)
+- **Technical University of Munich** — B.Sc. Computer Science (Informatik), 6 semesters (Oct 2023 – Oct 2026)
+- **Königin-Luise-Gymnasium Erfurt** — Abitur, final grade 1.2 (GPA equiv. 3.85/4.0) (2015 – 2023)
 
 ## Featured Projects
 
 ### PolySimulator
-- Description: AI-powered prediction market paper-trading platform (Polymarket API). 1,880+ registered users, 599 MAU, ~6,270 monthly visitors. Built with AI-agent-assisted development using GitHub Copilot.
-- Tech: Python, FastAPI, TypeScript, Next.js, Redis, WebSockets, Supabase, Docker
+- Description: Paper-trading simulator, trading API and public Python SDK for Polymarket prediction markets. Orders fill level by level against the real order book. 7,000+ registered accounts. Nearly all of the code is written by AI coding agents (Claude Code, Codex).
+- Tech: Python, FastAPI, TypeScript, Next.js, PostgreSQL, Redis, WebSockets, Docker, Cloudflare R2
 - Live: https://polysimulator.com
 - GitHub: https://github.com/Bavariance
 
@@ -28,26 +29,26 @@ He is an early adopter of AI-assisted development workflows, using GitHub Copilo
 - Tech: C++, CMake, OpenMP, GoogleTest, VTK, Valgrind, Doxygen
 - GitHub: https://github.com/ErikEremenko/MolSim-WS25-GroupB
 
-### HackaTUM — IMC Trading Challenge (Bavariance Team)
+### Hackathon: HackaTUM — IMC Trading Challenge (Bavariance Team)
 - Description: Trading bot with Exchange API integration, automated order management and ensemble model for market price prediction. Built during HackaTUM 2025.
 - Tech: Python, Exchange API, Algorithmic Trading
 - Devpost: https://devpost.com/software/bavariance-imcity
 - GitHub: https://github.com/Bavariance/IMCity
 
-### Robo.Innovate Hackathon (TUM Venture Labs — BMW Team A)
+### Hackathon: Robo.Innovate (TUM Venture Labs — BMW Team A)
 - Description: On-premise server setup, training and fine-tuning of deep learning models via imitation learning using the LeRobot framework.
 - Tech: Python, Deep Learning, LeRobot, Imitation Learning
 - Live: https://unbox-robotics.vercel.app
 
 ## Experience
 
-### Co-Founder & Developer — Bavariance (in founding)
-- Period: Dec 2025 – Present
-- Building PolySimulator, an AI-powered prediction market paper-trading platform. Full-stack development with AI-agent-assisted workflows.
+### Co-founder — PolySimulator
+- Period: Nov 2025 – Present
+- Built a paper-trading simulator, trading API and order-book data platform for Polymarket with his co-founder. He orchestrates the AI coding agents that write nearly all of the code. In October 2026 they moved production from the US to London with an 11-minute maintenance window.
 
-### Bachelor Practical: Molecular Simulation — TU Munich
-- Period: Oct 2025 – Feb 2026
-- Group implementation of a molecular dynamics simulator. Collaborative PR workflow with mentor reviews and sprint demos.
+### Working Student, AI Workplace Assistance — ING Deutschland, COO Digital Office
+- Period: Jul 2026 – Dec 2026
+- Applied AI and automation for teams across the bank, including internal software built with AI coding agents.
 
 ## Certifications
 
@@ -65,8 +66,8 @@ He is an early adopter of AI-assisted development workflows, using GitHub Copilo
 
 ## Skills
 
-### AI & LLM Tools
-GitHub Copilot Agent, LLM Dev Workflows, MCP Development, LeRobot
+### AI Engineering
+Claude Code, Codex CLI, Multi-agent orchestration, Agent memory & context design, MCP servers, LeRobot
 
 ### Programming Languages
 Python, C, C++, Java, OCaml, TypeScript, JavaScript
@@ -75,10 +76,10 @@ Python, C, C++, Java, OCaml, TypeScript, JavaScript
 REST API, WebSockets, Node.js, Next.js, Full-Stack
 
 ### Cloud & Infrastructure
-AWS (Lambda, S3, EC2), Cloudflare, Google Cloud, Hetzner, Fly.io, Dokploy
+AWS (Lambda, S3, EC2), Cloudflare (R2, Workers), Google Cloud, Hetzner, Fly.io, Dokploy
 
 ### Databases
-Supabase (PostgreSQL), Redis, SQL
+PostgreSQL (Supabase), Redis, SQL
 
 ### DevOps & Build
 Git, Docker, CMake, Bash, CI/CD (GitHub Actions), OpenMP
@@ -94,9 +95,8 @@ German (native), English (C1), Russian (native), French (DELF B1)
 
 ## Contact
 
-- Email: erik.eremenko@tum.de
+- Email: erik@eremenko.io
 - GitHub: https://github.com/ErikEremenko
 - LinkedIn: https://www.linkedin.com/in/erik-eremenko-a225a625a/
 - Kaggle: https://www.kaggle.com/erikeremenko
 - Website: https://eremenko.io
-- CV (PDF): https://eremenko.io/cv-erik-eremenko.pdf

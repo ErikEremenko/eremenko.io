@@ -2,11 +2,13 @@ import { SectionHeading } from "./About";
 
 const skillCategories = [
   {
-    label: "AI & LLM Tools",
+    label: "AI Engineering",
     skills: [
-      "GitHub Copilot Agent",
-      "LLM Dev Workflows",
-      "MCP Development",
+      "Claude Code",
+      "Codex CLI",
+      "Multi-agent orchestration",
+      "Agent memory & context design",
+      "MCP servers",
       "LeRobot",
     ],
   },
@@ -22,7 +24,7 @@ const skillCategories = [
     label: "Cloud & Infra",
     skills: [
       "AWS (Lambda, S3, EC2)",
-      "Cloudflare",
+      "Cloudflare (R2, Workers)",
       "Google Cloud",
       "Hetzner",
       "Fly.io",
@@ -31,7 +33,7 @@ const skillCategories = [
   },
   {
     label: "Databases",
-    skills: ["Supabase (PostgreSQL)", "Redis", "SQL"],
+    skills: ["PostgreSQL (Supabase)", "Redis", "SQL"],
   },
   {
     label: "DevOps & Build",

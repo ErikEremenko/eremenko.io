@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Erik Eremenko — Software Developer",
   description:
-    "Personal website of Erik Eremenko — CS student at TUM, building prediction markets, HPC simulations, and full-stack web apps.",
+    "Erik Eremenko builds and runs software with AI coding agents: co-founder of PolySimulator, working student in applied AI at ING Deutschland, student at TU Munich.",
   keywords: [
     "Erik Eremenko",
     "software developer",
@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     "TypeScript",
     "Python",
     "molecular dynamics",
-    "AI-assisted development",
+    "AI coding agents",
+    "Claude Code",
     "computer science",
   ],
   authors: [{ name: "Erik Eremenko", url: "https://eremenko.io" }],
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Erik Eremenko — Software Developer",
     description:
-      "CS student at TUM. Building prediction markets, HPC simulations, and full-stack web apps.",
+      "Building and running software with AI coding agents. Co-founder of PolySimulator, student at TU Munich.",
     url: "https://eremenko.io",
     siteName: "Erik Eremenko",
     locale: "en_US",
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Erik Eremenko — Software Developer",
     description:
-      "CS student at TUM. Building prediction markets, HPC simulations, and full-stack web apps.",
+      "Building and running software with AI coding agents. Co-founder of PolySimulator, student at TU Munich.",
     images: ["/og.png"],
   },
   robots: {
@@ -82,7 +83,7 @@ const jsonLd = {
       url: "https://eremenko.io",
       name: "Erik Eremenko",
       description:
-        "Personal website of Erik Eremenko — CS student at TUM, building prediction markets, HPC simulations, and full-stack web apps.",
+        "Erik Eremenko builds and runs software with AI coding agents: co-founder of PolySimulator, working student in applied AI at ING Deutschland, student at TU Munich.",
       inLanguage: "en",
     },
     {
@@ -98,10 +99,10 @@ const jsonLd = {
       "@id": "https://eremenko.io/#person",
       name: "Erik Eremenko",
       url: "https://eremenko.io",
-      email: "erik.eremenko@tum.de",
+      email: "erik@eremenko.io",
       jobTitle: "Software Developer",
       description:
-        "Computer Science student at TU Munich (minor in Mathematics). Co-founder of PolySimulator, building prediction markets, HPC simulations, and full-stack web applications.",
+        "Information Systems student at TU Munich and co-founder of PolySimulator, a paper-trading simulator for Polymarket built and run with AI coding agents.",
       knowsAbout: [
         "Python",
         "C++",
@@ -113,11 +114,12 @@ const jsonLd = {
         "AWS",
         "Prediction Markets",
         "Molecular Dynamics",
-        "AI-Assisted Development",
-        "GitHub Copilot",
+        "AI Coding Agents",
+        "Claude Code",
+        "Codex",
       ],
       knowsLanguage: ["German", "English", "Russian", "French"],
-      alumniOf: {
+      affiliation: {
         "@type": "CollegeOrUniversity",
         name: "Technical University of Munich",
         url: "https://www.tum.de",

@@ -6,14 +6,10 @@ export default function About() {
       <div className="grid md:grid-cols-[3fr_2fr] gap-10">
         <div className="space-y-4 text-muted leading-relaxed">
           <p>
-            I&apos;m a Computer Science student at the{" "}
-            <span className="text-foreground">Technical University of Munich</span>{" "}
-            (minor in Mathematics), currently in my 6th semester. I&apos;m
-            passionate about building software that solves real problems - from
-            prediction market platforms to molecular dynamics simulators.
+            I build software with AI coding agents and run it in production.
           </p>
           <p>
-            As co-founder of{" "}
+            Since November 2025 my co-founder and I have built{" "}
             <a
               href="https://polysimulator.com"
               target="_blank"
@@ -22,14 +18,29 @@ export default function About() {
             >
               PolySimulator
             </a>
-            , I developed a full-stack paper-trading platform that serves 1,880+
-            registered users. I enjoy working across the stack - from
-            low-level C++ simulations to cloud-native web applications.
+            , a paper-trading simulator and trading API for Polymarket. Since
+            May 2026 nearly all of its code has been written by AI agents that I
+            orchestrate with Claude Code and Codex: sessions with fixed roles, a
+            shared memory, AI review before merging, and production alerts
+            routed back to the agents. How it works is written up on{" "}
+            <a
+              href="https://bavariance.com/work"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:text-accent-hover transition-colors"
+            >
+              bavariance.com
+            </a>
+            .
           </p>
           <p>
-            I&apos;m an early adopter of AI-assisted development workflows,
-            using GitHub Copilot Agent and MCP integrations extensively in my
-            daily work.
+            At ING Deutschland I&apos;m a working student in AI Workplace
+            Assistance, bringing applied AI and automation to teams across the
+            bank.
+          </p>
+          <p>
+            I study Information Systems (Wirtschaftsinformatik) at TUM, after
+            six semesters of Computer Science.
           </p>
         </div>
 
@@ -43,18 +54,25 @@ export default function About() {
                 Technical University of Munich
               </p>
               <p className="text-sm text-muted">
-                B.Sc. Computer Science, Minor in Mathematics
+                B.Sc. Information Systems (Wirtschaftsinformatik)
               </p>
-              <p className="text-xs text-muted mt-1">
-                Oct 2023 - exp. Apr 2027
+              <p className="text-xs text-muted mt-1">Since Oct 2026</p>
+            </div>
+            <div className="border-l-2 border-card-border pl-4">
+              <p className="text-sm font-medium text-foreground">
+                Technical University of Munich
               </p>
+              <p className="text-sm text-muted">
+                B.Sc. Computer Science (Informatik), 6 semesters
+              </p>
+              <p className="text-xs text-muted mt-1">Oct 2023 - Oct 2026</p>
             </div>
             <div className="border-l-2 border-card-border pl-4">
               <p className="text-sm font-medium text-foreground">
                 Königin-Luise-Gymnasium Erfurt
               </p>
               <p className="text-sm text-muted">
-                Abitur - graduated with distinction (1.2/1.0, GPA equiv. 3.85/4.0)
+                Abitur, final grade 1.2 (GPA equiv. 3.85/4.0)
               </p>
               <p className="text-xs text-muted mt-1">2015 - 2023</p>
             </div>

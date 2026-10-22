@@ -4,18 +4,19 @@ import { ExternalLinkIcon, GitHubIcon } from "./Icons";
 const projects = [
   {
     title: "PolySimulator",
-    subtitle: "AI-powered Prediction Market Platform",
+    subtitle: "Paper trading on Polymarket, built and run with AI agents",
     description:
-      "Full-stack paper-trading platform for prediction markets (Polymarket API). 1,880+ registered users, 599 MAU, ~6,270 monthly visitors. Built with AI-agent-assisted development using GitHub Copilot.",
+      "Paper-trading simulator, trading API and public Python SDK for Polymarket prediction markets. Orders fill level by level against the real order book. 7,000+ registered accounts. Nearly all of the code is written by AI coding agents (Claude Code, Codex).",
     tech: [
       "Python",
       "FastAPI",
       "TypeScript",
       "Next.js",
+      "PostgreSQL",
       "Redis",
       "WebSockets",
-      "Supabase",
       "Docker",
+      "Cloudflare R2",
     ],
     links: {
       live: "https://polysimulator.com",
@@ -73,7 +74,7 @@ export default function Projects() {
       </div>
 
       <h3 className="text-lg font-semibold mt-12 mb-4">
-        Other Notable Projects
+        Hackathons
       </h3>
       <div className="grid sm:grid-cols-2 gap-4">
         {projects

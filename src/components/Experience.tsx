@@ -2,18 +2,18 @@ import { SectionHeading } from "./About";
 
 const experiences = [
   {
-    title: "Co-Founder & Developer",
-    org: "Bavariance (in founding)",
-    period: "Dec 2025 — Present",
+    title: "Co-founder",
+    org: "PolySimulator",
+    period: "Nov 2025 — Present",
     description:
-      "Building PolySimulator, an AI-powered prediction market paper-trading platform. Full-stack development with AI-agent-assisted workflows.",
+      "Built a paper-trading simulator, trading API and order-book data platform for Polymarket with my co-founder. I orchestrate the AI coding agents that write nearly all of the code. In October 2026 we moved production from the US to London with an 11-minute maintenance window.",
   },
   {
-    title: "Bachelor Practical: Molecular Simulation",
-    org: "TU Munich",
-    period: "Oct 2025 — Feb 2026",
+    title: "Working Student, AI Workplace Assistance",
+    org: "ING Deutschland, COO Digital Office",
+    period: "Jul 2026 — Dec 2026",
     description:
-      "Group implementation of a molecular dynamics simulator. Collaborative PR workflow with mentor reviews and sprint demos.",
+      "Applied AI and automation for teams across the bank, including internal software built with AI coding agents.",
   },
 ];
 

@@ -4,19 +4,18 @@ import { GitHubIcon, LinkedInIcon, KaggleIcon, EmailIcon } from "./Icons";
 export default function Contact() {
   return (
     <section id="contact" className="py-20">
-      <SectionHeading>Get In Touch</SectionHeading>
+      <SectionHeading>Contact</SectionHeading>
 
       <div className="max-w-lg">
         <p className="text-muted leading-relaxed mb-8">
-          I&apos;m always open to interesting conversations, collaboration
-          opportunities, or just a friendly hello. Feel free to reach out!
+          Email is the best way to reach me.
         </p>
 
         <div className="space-y-3 mb-8">
           <ContactLink
-            href="mailto:erik.eremenko@tum.de"
+            href="mailto:erik@eremenko.io"
             icon={<EmailIcon className="w-4 h-4" />}
-            label="erik.eremenko@tum.de"
+            label="erik@eremenko.io"
           />
           <ContactLink
             href="https://github.com/ErikEremenko"
@@ -36,10 +35,10 @@ export default function Contact() {
         </div>
 
         <a
-          href="mailto:erik.eremenko@tum.de"
+          href="mailto:erik@eremenko.io"
           className="inline-block px-6 py-3 text-sm border border-accent text-accent rounded hover:bg-accent/10 transition-colors"
         >
-          Say Hello
+          Email me
         </a>
       </div>
 

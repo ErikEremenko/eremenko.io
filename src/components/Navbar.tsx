@@ -55,6 +55,7 @@ export default function Navbar() {
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-muted hover:text-foreground"
           aria-label="Toggle menu"
+          aria-expanded={menuOpen}
         >
           <svg
             className="w-5 h-5"
