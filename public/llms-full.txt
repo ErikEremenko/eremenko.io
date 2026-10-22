@@ -16,6 +16,17 @@ At ING Deutschland he is a working student in AI Workplace Assistance, bringing 
 - **Technical University of Munich** — B.Sc. Computer Science (Informatik), 6 semesters (Oct 2023 – Oct 2026)
 - **Königin-Luise-Gymnasium Erfurt** — Abitur, final grade 1.2 (GPA equiv. 3.85/4.0) (2015 – 2023)
 
+## Selected Work
+
+### Moving production to London (October 2026)
+- Four days from decision to cutover. The website was in maintenance for 11 minutes 22 seconds; 7,590 user records and 7,867 login identities were copied with matching row counts and checksums, with reverse replication ready for a rollback.
+
+### Order-book capture (since July 2026)
+- PolySimulator records Polymarket's full order-book feed itself, on 8 recorder shards, into a datalake of about 20 TB.
+
+### Pull requests
+- 4,445 pull requests merged into PolySimulator's main repository between 17 November 2025 and 21 October 2026 (GitHub, fetched 22 October 2026). Since May 2026 AI agents have written nearly all of the code; most code changes get an AI review before merging, and production releases need one of the two founders.
+
 ## Featured Projects
 
 ### PolySimulator
@@ -100,3 +111,5 @@ German (native), English (C1), Russian (native), French (DELF B1)
 - LinkedIn: https://www.linkedin.com/in/erik-eremenko-a225a625a/
 - Kaggle: https://www.kaggle.com/erikeremenko
 - Website: https://eremenko.io
+- CV (PDF, English): https://eremenko.io/Erik_Eremenko_CV.pdf
+- Lebenslauf (PDF, Deutsch): https://eremenko.io/Erik_Eremenko_Lebenslauf.pdf

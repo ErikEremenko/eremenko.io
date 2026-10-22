@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Schibsted_Grotesk, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const head = Schibsted_Grotesk({
+  variable: "--font-head",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = Source_Serif_4({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "Erik Eremenko — Software Developer",
+  title: "Erik Eremenko",
   description:
     "Erik Eremenko builds and runs software with AI coding agents: co-founder of PolySimulator, working student in applied AI at ING Deutschland, student at TU Munich.",
   keywords: [
@@ -99,6 +102,7 @@ const jsonLd = {
       "@id": "https://eremenko.io/#person",
       name: "Erik Eremenko",
       url: "https://eremenko.io",
+      image: "https://eremenko.io/img/erik.jpg",
       email: "erik@eremenko.io",
       jobTitle: "Software Developer",
       description:
@@ -139,7 +143,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={`${head.variable} ${body.variable}`}>
       <head>
         <script
           type="application/ld+json"
@@ -147,7 +151,6 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         suppressHydrationWarning
       >
         {children}

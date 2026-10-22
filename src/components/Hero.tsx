@@ -1,71 +1,46 @@
-import { GitHubIcon, LinkedInIcon, KaggleIcon, EmailIcon } from "./Icons";
+import { CV_EN } from "./Header";
 
 export default function Hero() {
   return (
-    <section className="min-h-[85vh] flex flex-col justify-center pt-14">
-      <div className="animate-fade-in-up">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
-          Erik Eremenko
-        </h1>
-      </div>
-      <div className="animate-fade-in-up animation-delay-100">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted mb-6">
-          I build and run software
-          <br className="hidden sm:block" /> with AI coding agents.
-        </p>
-      </div>
-      <div className="animate-fade-in-up animation-delay-200">
-        <p className="text-muted max-w-xl text-base leading-relaxed mb-8">
-          Co-founder of{" "}
-          <a
-            href="https://polysimulator.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-foreground font-medium hover:text-accent transition-colors"
-          >
-            PolySimulator
-          </a>
-          , a paper-trading simulator for Polymarket with 7,000+ registered
-          accounts. Working student in applied AI at ING Deutschland, and a
-          student at{" "}
-          <span className="text-foreground font-medium">TU Munich</span>.
-        </p>
-      </div>
-      <div className="animate-fade-in-up animation-delay-300 flex items-center gap-5">
-        <a
-          href="https://github.com/ErikEremenko"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted hover:text-foreground transition-colors"
-          aria-label="GitHub"
-        >
-          <GitHubIcon className="w-5 h-5" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/erik-eremenko-a225a625a/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted hover:text-foreground transition-colors"
-          aria-label="LinkedIn"
-        >
-          <LinkedInIcon className="w-5 h-5" />
-        </a>
-        <a
-          href="https://www.kaggle.com/erikeremenko"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-muted hover:text-foreground transition-colors"
-          aria-label="Kaggle"
-        >
-          <KaggleIcon className="w-5 h-5" />
-        </a>
-        <a
-          href="mailto:erik@eremenko.io"
-          className="text-muted hover:text-foreground transition-colors"
-          aria-label="Email"
-        >
-          <EmailIcon className="w-5 h-5" />
-        </a>
+    <section className="hero" id="top">
+      <div className="wrap hero-grid">
+        <div>
+          <h1>Erik Eremenko</h1>
+          <p className="claim">
+            I build software with a team of AI agents, and I run it in
+            production.
+          </p>
+          <p className="lead">
+            I co-founded{" "}
+            <a className="link" href="https://polysimulator.com">
+              PolySimulator
+            </a>
+            , a paper-trading simulator for Polymarket with 7,000+ registered
+            accounts. Since May 2026, AI coding agents that I orchestrate have
+            written nearly all of its code. I&apos;m a working student in
+            applied AI at ING Deutschland and study Information Systems at TU
+            Munich.
+          </p>
+          <div className="actions">
+            <a className="btn btn-primary" href="mailto:erik@eremenko.io">
+              Email me
+            </a>
+            <a className="btn btn-secondary" href={CV_EN}>
+              Download CV
+            </a>
+            <span className="elsewhere">
+              <a href="https://github.com/ErikEremenko">GitHub</a>
+              <a href="https://www.linkedin.com/in/erik-eremenko-a225a625a/">
+                LinkedIn
+              </a>
+            </span>
+          </div>
+        </div>
+        <figure className="portrait">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/img/erik.jpg" alt="Erik Eremenko" width={400} height={400} />
+          <figcaption>Munich, Germany</figcaption>
+        </figure>
       </div>
     </section>
   );

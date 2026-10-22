@@ -13,6 +13,8 @@ Erik Eremenko is co-founder of PolySimulator (https://polysimulator.com), a pape
 - LinkedIn: https://www.linkedin.com/in/erik-eremenko-a225a625a/
 - Kaggle: https://www.kaggle.com/erikeremenko
 - Website: https://eremenko.io
+- CV (PDF, English): https://eremenko.io/Erik_Eremenko_CV.pdf
+- Lebenslauf (PDF, Deutsch): https://eremenko.io/Erik_Eremenko_Lebenslauf.pdf
 
 ## Extended Information
 

@@ -1,74 +1,33 @@
-import { SectionHeading } from "./About";
-import { GitHubIcon, LinkedInIcon, KaggleIcon, EmailIcon } from "./Icons";
+import { CV_DE, CV_EN } from "./Header";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20">
-      <SectionHeading>Contact</SectionHeading>
-
-      <div className="max-w-lg">
-        <p className="text-muted leading-relaxed mb-8">
-          Email is the best way to reach me.
-        </p>
-
-        <div className="space-y-3 mb-8">
-          <ContactLink
-            href="mailto:erik@eremenko.io"
-            icon={<EmailIcon className="w-4 h-4" />}
-            label="erik@eremenko.io"
-          />
-          <ContactLink
-            href="https://github.com/ErikEremenko"
-            icon={<GitHubIcon className="w-4 h-4" />}
-            label="ErikEremenko"
-          />
-          <ContactLink
-            href="https://www.linkedin.com/in/erik-eremenko-a225a625a/"
-            icon={<LinkedInIcon className="w-4 h-4" />}
-            label="Erik Eremenko"
-          />
-          <ContactLink
-            href="https://www.kaggle.com/erikeremenko"
-            icon={<KaggleIcon className="w-4 h-4" />}
-            label="erikeremenko"
-          />
-        </div>
-
-        <a
-          href="mailto:erik@eremenko.io"
-          className="inline-block px-6 py-3 text-sm border border-accent text-accent rounded hover:bg-accent/10 transition-colors"
-        >
-          Email me
+    <section className="contact" id="contact">
+      <div className="wrap">
+        <h2>Contact</h2>
+        <p className="intro">Email is the quickest way to reach me.</p>
+        <a className="mail" href="mailto:erik@eremenko.io">
+          erik@eremenko.io
         </a>
+        <div className="links">
+          <a className="link" href={CV_EN}>
+            CV (English, PDF)
+          </a>
+          <a className="link" href={CV_DE}>
+            Lebenslauf (Deutsch, PDF)
+          </a>
+          <a className="link" href="https://www.linkedin.com/in/erik-eremenko-a225a625a/">
+            LinkedIn
+          </a>
+          <a className="link" href="https://github.com/ErikEremenko">
+            GitHub
+          </a>
+          <a className="link" href="https://www.kaggle.com/erikeremenko">
+            Kaggle
+          </a>
+        </div>
+        <p className="foot">Erik Eremenko, Munich, 2026</p>
       </div>
-
-      <footer className="mt-20 pt-8 border-t border-card-border text-center">
-        <p className="text-xs text-muted">
-          &copy; {new Date().getFullYear()} Erik Eremenko
-        </p>
-      </footer>
     </section>
-  );
-}
-
-function ContactLink({
-  href,
-  icon,
-  label,
-}: {
-  href: string;
-  icon: React.ReactNode;
-  label: string;
-}) {
-  return (
-    <a
-      href={href}
-      target={href.startsWith("mailto:") ? undefined : "_blank"}
-      rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-      className="flex items-center gap-3 text-sm text-muted hover:text-foreground transition-colors"
-    >
-      {icon}
-      <span>{label}</span>
-    </a>
   );
 }

@@ -1,93 +1,39 @@
-import { SectionHeading } from "./About";
-
-const skillCategories = [
+const skills = [
   {
-    label: "AI Engineering",
-    skills: [
-      "Claude Code",
-      "Codex CLI",
-      "Multi-agent orchestration",
-      "Agent memory & context design",
-      "MCP servers",
-      "LeRobot",
-    ],
+    k: "AI engineering",
+    v: "Claude Code and Codex CLI, multi-agent orchestration, agent memory and context design, review gates, MCP servers",
   },
   {
-    label: "Languages",
-    skills: ["Python", "C", "C++", "Java", "OCaml", "TypeScript", "JavaScript"],
+    k: "Software",
+    v: "Python (FastAPI), TypeScript, React and Next.js, SQL and PostgreSQL, Redis, WebSockets, C++ with OpenMP; also C, Java and OCaml",
   },
   {
-    label: "Web & API",
-    skills: ["REST API", "WebSockets", "Node.js", "Next.js", "Full-Stack"],
+    k: "Operations",
+    v: "Docker, GitHub Actions, Cloudflare (R2, Workers), AWS, Grafana, Prometheus and Loki, database migrations, incident analysis",
   },
   {
-    label: "Cloud & Infra",
-    skills: [
-      "AWS (Lambda, S3, EC2)",
-      "Cloudflare (R2, Workers)",
-      "Google Cloud",
-      "Hetzner",
-      "Fly.io",
-      "Dokploy",
-    ],
+    k: "Data and ML",
+    v: "Real-time capture pipelines, NumPy, pandas, Matplotlib, online learning, imitation learning with LeRobot",
   },
   {
-    label: "Databases",
-    skills: ["PostgreSQL (Supabase)", "Redis", "SQL"],
-  },
-  {
-    label: "DevOps & Build",
-    skills: [
-      "Git",
-      "Docker",
-      "CMake",
-      "Bash",
-      "CI/CD (GitHub Actions)",
-      "OpenMP",
-    ],
-  },
-  {
-    label: "Observability",
-    skills: ["Prometheus", "Grafana", "Loki", "PostHog", "MS Clarity"],
-  },
-  {
-    label: "Math & Data",
-    skills: ["NumPy", "Pandas", "Matplotlib", "Seaborn"],
+    k: "Languages",
+    v: "German and Russian (native), English (C1), French (DELF B1)",
   },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20">
-      <SectionHeading>Skills</SectionHeading>
-
-      <div className="grid sm:grid-cols-2 gap-6">
-        {skillCategories.map((cat) => (
-          <div key={cat.label}>
-            <h3 className="text-sm font-semibold text-foreground mb-2">
-              {cat.label}
-            </h3>
-            <div className="flex flex-wrap gap-2">
-              {cat.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="text-xs px-2 py-1 rounded border border-card-border text-muted hover:text-foreground hover:border-accent/30 transition-colors"
-                >
-                  {skill}
-                </span>
-              ))}
+    <section className="sec" id="skills">
+      <div className="wrap">
+        <h2>Skills</h2>
+        <dl className="skills">
+          {skills.map((s) => (
+            <div key={s.k} style={{ display: "contents" }}>
+              <dt>{s.k}</dt>
+              <dd>{s.v}</dd>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-10 pt-6 border-t border-card-border">
-        <h3 className="text-sm font-semibold text-foreground mb-2">
-          Languages
-        </h3>
-        <p className="text-sm text-muted">
-          German (native) · English (C1) · Russian (native) · French (DELF B1)
-        </p>
+          ))}
+        </dl>
       </div>
     </section>
   );
