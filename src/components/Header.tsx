@@ -2,8 +2,10 @@ export const CV_EN = "/Erik_Eremenko_CV.pdf";
 export const CV_DE = "/Erik_Eremenko_Lebenslauf.pdf";
 
 const links = [
+  { label: "About", href: "#about" },
+  { label: "PolySimulator", href: "#engineering" },
   { label: "How I work", href: "#how" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#work" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];

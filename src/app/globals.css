@@ -382,6 +382,45 @@ a {
   color: var(--ink-2);
 }
 
+/* ---------------------------------------------------------------- story */
+.story {
+  display: grid;
+  grid-template-columns: minmax(0, 4fr) minmax(0, 7fr);
+  gap: 56px;
+  align-items: start;
+}
+.story h2 {
+  margin: 0;
+}
+.story-body p {
+  margin: 0 0 18px;
+  color: var(--ink-2);
+  max-width: 36em;
+}
+.story-body p:first-child {
+  font-size: 21px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+
+/* ---------------------------------------------------------------- agent tooling */
+.tools {
+  margin-top: 64px;
+}
+.sub {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+}
+.tools .intro {
+  margin-bottom: 24px;
+}
+.tools .src {
+  margin-top: 14px;
+}
+
 /* ---------------------------------------------------------------- activity */
 .activity {
   background: var(--surface);
@@ -483,6 +522,33 @@ a {
 .data th:last-child {
   text-align: right;
   padding-right: 0;
+}
+
+/* ---------------------------------------------------------------- engineering */
+.flow {
+  margin-top: 48px;
+}
+.cols3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 40px;
+  margin-top: 48px;
+}
+.cols3 > div {
+  border-top: 2px solid var(--ink);
+  padding-top: 18px;
+}
+.cols3 h3 {
+  font-family: var(--head);
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+.cols3 p {
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0 0 12px;
 }
 
 /* ---------------------------------------------------------------- work */
@@ -719,8 +785,12 @@ a {
   }
   .points,
   .work-list,
-  .tl {
+  .tl,
+  .cols3 {
     grid-template-columns: 1fr;
+  }
+  .cols3 > div + div {
+    margin-top: 28px;
   }
   .activity .heat-d {
     display: none;
@@ -747,6 +817,13 @@ a {
   }
   .skills {
     grid-template-columns: 1fr;
+  }
+  .story {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .story-body p:first-child {
+    font-size: 19px;
   }
   .skills dt {
     padding-bottom: 2px;

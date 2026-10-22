@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import Story from "@/components/Story";
+import Engineering from "@/components/Engineering";
 import SystemMap from "@/components/SystemMap";
 import Activity from "@/components/Activity";
 import Work from "@/components/Work";
@@ -13,6 +15,8 @@ export default function Home() {
       <Header />
       <main id="main">
         <Hero />
+        <Story />
+        <Engineering />
         <SystemMap />
         <Activity />
         <Work />

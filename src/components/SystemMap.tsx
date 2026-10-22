@@ -1,3 +1,5 @@
+import AgentTools from "./AgentTools";
+
 const roles = ["Operations", "Business and finance", "Research", "Websites"];
 
 const pipeline = [
@@ -152,6 +154,7 @@ export default function SystemMap() {
             More on bavariance.com
           </a>
         </p>
+        <AgentTools />
       </div>
     </section>
   );

@@ -47,7 +47,7 @@ function Heatmap() {
   const cell = 14;
   const step = 17;
   const left = 34;
-  const top = 46;
+  const top = 56;
   const weeks = Math.ceil(merges.counts.length / 7);
   const width = left + weeks * step;
   const height = top + 7 * step + 34;
@@ -69,6 +69,8 @@ function Heatmap() {
     { x: markAt("2026-05-01"), t: "Agents write nearly all code" },
     { x: markAt("2026-10-21"), t: "Production moves to London", end: true },
   ];
+  // The quiet weeks in summer were Erik's exams.
+  const exams = { x1: markAt("2026-06-22") - cell / 2, x2: markAt("2026-08-02") + cell / 2 };
 
   return (
     <svg
@@ -79,12 +81,18 @@ function Heatmap() {
     >
       {marks.map((mk) => (
         <g key={mk.t}>
-          <line className="mk" x1={mk.x} x2={mk.x} y1={8} y2={top - 6} />
+          <line className="mk" x1={mk.x} x2={mk.x} y1={6} y2={top - 6} />
           <text className="mk-t" x={mk.end ? mk.x - 6 : mk.x + 6} y={18} textAnchor={mk.end ? "end" : "start"}>
             {mk.t}
           </text>
         </g>
       ))}
+      <g>
+        <path className="mk" fill="none" d={`M${exams.x1} ${top - 4} V${top - 9} H${exams.x2} V${top - 4}`} />
+        <text className="mk-t" x={(exams.x1 + exams.x2) / 2} y={top - 14} textAnchor="middle">
+          Exams
+        </text>
+      </g>
       {DAYS.map((d, r) =>
         d ? (
           <text key={r} className="ax" x={0} y={top + r * step + 11}>
@@ -162,7 +170,11 @@ export default function Activity() {
           <div className="head">
             <span className="big">{merges.total.toLocaleString("en-US")}</span>
             <span className="big-l">
-              pull requests merged, {fmt(dayAt(0))} to {fmt(dayAt(merges.counts.length - 1))}
+              pull requests merged by the two founders, {fmt(dayAt(0))} to{" "}
+              {fmt(dayAt(merges.counts.length - 1))}:{" "}
+              {merges.erik.toLocaleString("en-US")} from my account,{" "}
+              {merges.cofounder.toLocaleString("en-US")} from my co-founder&apos;s
+              and {merges.other} from GitHub&apos;s Copilot agent
             </span>
           </div>
           <Heatmap />
@@ -198,9 +210,9 @@ export default function Activity() {
           </details>
         </div>
         <p className="src" style={{ marginTop: 14 }}>
-          Source: GitHub, pull requests merged into PolySimulator&apos;s main
-          repository by both founders&apos; accounts, counted by UTC date;
-          fetched 22 October 2026. November 2025 starts on the 17th and October
+          Source: GitHub, every pull request merged into PolySimulator&apos;s
+          main repository, counted by the account that opened it and by UTC
+          merge date; fetched 22 October 2026. November 2025 starts on the 17th and October
           2026 ends on the 21st.
         </p>
       </div>

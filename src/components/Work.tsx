@@ -1,17 +1,5 @@
 const more = [
   {
-    when: "October 2026",
-    h: "Moving production to London",
-    p: "Four days from decision to cutover. The website was in maintenance for 11 minutes 22 seconds; 7,590 user records and 7,867 login identities were copied with matching row counts and checksums, with reverse replication ready for a rollback.",
-    links: [],
-  },
-  {
-    when: "Since July 2026",
-    h: "Order-book capture",
-    p: "PolySimulator records Polymarket's full order-book feed itself, on 8 recorder shards, into a datalake of about 20 TB.",
-    links: [],
-  },
-  {
     when: "October 2025 to February 2026, TUM lab course",
     h: "Molecular dynamics simulator",
     p: "A team-built simulator in C++ with the Lennard-Jones potential and the linked-cell algorithm, parallelized with OpenMP and checked with GoogleTest, sanitizers and Valgrind.",
@@ -47,46 +35,8 @@ export default function Work() {
   return (
     <section className="sec" id="work">
       <div className="wrap">
-        <h2>Work</h2>
-        <div className="feature">
-          <picture>
-            <source srcSet="/img/polysimulator-market-1x.jpg 1x, /img/polysimulator-market-2x.jpg 2x" />
-            <img
-              src="/img/polysimulator-market-1x.jpg"
-              width={1176}
-              height={917}
-              alt="A PolySimulator market page with the price chart, order book and trade ticket"
-              loading="lazy"
-            />
-          </picture>
-          <div>
-            <span className="when">Since November 2025, co-founder</span>
-            <h3>PolySimulator</h3>
-            <p>
-              A paper-trading simulator, trading API and public Python SDK for
-              Polymarket&apos;s prediction markets. Orders fill level by level
-              against the real order book, with the venue&apos;s fees, so
-              trading software can be tested before it risks money.
-            </p>
-            <p>
-              7,000+ registered accounts. Built with my co-founder, Wladimir
-              Kirjanovs, and run day to day with AI agents.
-            </p>
-            <div className="links">
-              <a className="link" href="https://polysimulator.com">
-                polysimulator.com
-              </a>
-              <a className="link" href="https://github.com/Bavariance/polysimulator-sdk">
-                Python SDK
-              </a>
-              <a className="link" href="https://bavariance.com/work">
-                How it is built
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <ul className="work-list">
+        <h2>Studies and hackathons</h2>
+        <ul className="work-list" style={{ marginTop: 8 }}>
           {more.map((w) => (
             <li key={w.h}>
               <span className="when">{w.when}</span>
@@ -104,10 +54,6 @@ export default function Work() {
             </li>
           ))}
         </ul>
-        <p className="src">
-          Account and move figures: PolySimulator&apos;s production records,
-          October 2026. Datalake size: our storage bucket, October 2026.
-        </p>
       </div>
     </section>
   );

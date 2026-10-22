@@ -7,8 +7,8 @@ export default function Hero() {
         <div>
           <h1>Erik Eremenko</h1>
           <p className="claim">
-            I build software with a team of AI agents, and I run it in
-            production.
+            I study markets by simulating them, and I build the software with
+            a team of AI agents.
           </p>
           <p className="lead">
             I co-founded{" "}
@@ -16,7 +16,8 @@ export default function Hero() {
               PolySimulator
             </a>
             , a paper-trading simulator for Polymarket with 7,000+ registered
-            accounts. Since May 2026, AI coding agents that I orchestrate have
+            accounts, and designed its core architecture, trading engine and
+            API. Since May 2026, AI coding agents that I orchestrate have
             written nearly all of its code. I&apos;m a working student in
             applied AI at ING Deutschland and study Information Systems at TU
             Munich.
